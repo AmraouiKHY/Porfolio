@@ -14,7 +14,7 @@ module.exports = {
         darkBackground: "#22262D",
         darkBlack: "#000000",
         grayColor: "#22262D",
-        yellowColor: "FFE033",
+        yellowColor: "#FFE033",
       },
     },
   },
