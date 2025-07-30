@@ -1,50 +1,63 @@
-# Mitch's Portfolio Website
+# Your Portfolio Website
 
-![alt text](https://cdn.sanity.io/images/xbn4zmfs/production/3de98614552f63c0c1446910ce241b3a67dfb0ef-2268x748.png)
+A modern portfolio website built with Next.js, TypeScript, Framer Motion, and Tailwind CSS. The backend uses Express.js to serve portfolio data including personal information, projects, skills, and work experience.
 
-I wanted to learn more about Next JS, Typescript, Framer Motion and Tailwind and so I used my portfolio website as an opportunity to do this. The website was originally inspired by a YouTube video by Sonny Sangha, and over time has morphed into something I am quite proud of. The portfolio uses Sanity as backend, so that it can update the information without rebuilding the application.
+## Tech Stack
 
-Want to see it in action? You can find the website [here](https://mitchellsparrow.com)!
+- **Frontend**: Next.js, TypeScript, Tailwind CSS, Framer Motion
+- **Backend**: Express.js, Node.js
+- **Styling**: Tailwind CSS with custom animations
+- **Icons**: Heroicons, React Social Icons
 
-# Next JS:
+## Running the Application
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Start the Express.js Backend Server
 
-## Running the code
-
-First, run the development server:
+First, install and start the backend server:
 
 ```bash
+cd server
+npm install
 npm run dev
-# or
-yarn dev
+```
+
+The backend server will run on [http://localhost:5000](http://localhost:5000)
+
+### Start the Next.js Frontend
+
+In a new terminal, from the root directory:
+
+```bash
+npm install
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Customizing Your Portfolio
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. **Update Personal Information**: Edit the data in `server/app.js`
+2. **Add Your Images**: Place images in `server/uploads/` directory
+3. **Modify Styling**: Update colors and styles in `tailwind.config.js`
+4. **Update Components**: Customize components in the `components/` directory
 
-# Vercel:
+## API Endpoints
 
+The Express.js server provides these endpoints:
+- `/api/pageInfo` - Personal information and hero data
+- `/api/experience` - Work experience history
+- `/api/projects` - Portfolio projects
+- `/api/skills` - Technical skills and proficiencies
+- `/api/socials` - Social media links
+
+## Deployment
+
+### Frontend (Vercel)
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Backend
+Deploy your Express.js server to platforms like Heroku, Railway, or DigitalOcean.
 
-# Sanity:
-
-To just run sanity:
-
-```
-cd sanity
-sanity start
-```
-
-To deploy sanity:
-
-```
-sanity deploy
-```
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

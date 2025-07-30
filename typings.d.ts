@@ -1,69 +1,52 @@
 
 
-interface SanityBody {
-    _createdAt: string;
+interface BaseEntity {
     _id: string;
-    _rev: string;
-    _updatedAt: string;
 }
 
-interface Image {
-    _type: 'image';
-    asset: {
-        _ref: string;
-        _type: 'reference';
-    };
-}
-
-export interface PageInfo extends SanityBody {
-    _type: 'pageInfo';
-    address: string;
-    backgroundInformation: string;
-    email: string;
-    role: string;
-    heroImage: Image;
+export interface PageInfo extends BaseEntity {
     name: string;
+    role: string;
+    heroImage: string;
+    backgroundInformation: string;
+    profilePic: string;
     phoneNumber: string;
-    profilePic: Image;
+    email: string;
+    address: string;
 }
 
-export interface Technology extends SanityBody {
-    _type: 'technology';
-    image: Image;
-    progress: number;
+export interface Technology extends BaseEntity {
     title: string;
+    image: string;
 }
 
-export interface Skill extends SanityBody {
-    _type: 'skill';
-    image: Image;
-    progress: number;
+export interface Skill extends BaseEntity {
     title: string;
+    image: string;
+    progress: number;
 }
 
-export interface Experience extends SanityBody {
-    _type: 'experience';
+export interface Experience extends BaseEntity {
     company: string;
-    companyImage: Image;
-    dateStarted: date;
-    dateEnded: date;
+    companyImage: string;
+    dateStarted: string;
+    dateEnded: string | null;
     isCurrentlyWorkingHere: boolean;
     jobTitle: string;
     points: string[];
     technologies: Technology[];
 }
 
-export interface Project extends SanityBody {
-    _type: 'project';
+export interface Project extends BaseEntity {
     title: string;
     linkToBuild: string;
-    image: Image;
+    githubLink?: string;
+    image: string;
     summary: string;
     technologies: Technology[];
 }
 
-export interface Social extends SanityBody {
-    _type: 'social';
+export interface Social extends BaseEntity {
     title: string;
     url: string;
 }
