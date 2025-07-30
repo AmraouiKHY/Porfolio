@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { urlFor } from "../sanity";
 import { PageInfo } from "../typings";
 import BackgroundCircles from "./BackgroundCircles";
 
@@ -25,8 +24,8 @@ export default function Hero({ pageInfo }: Props) {
 
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src={urlFor(pageInfo?.heroImage).url()}
-        alt=""
+        src={`${process.env.NEXT_PUBLIC_SERVER_URL}${pageInfo?.heroImage}`}
+        alt={pageInfo?.name || "Hero image"}
       />
 
       <div className="z-20">

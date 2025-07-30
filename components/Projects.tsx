@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { urlFor } from "../sanity";
 import { Project } from "../typings";
 
 type Props = { projects: Project[] };
@@ -29,8 +28,8 @@ export default function Projects({ projects }: Props) {
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
               className=" h-28 xl:h-80 md:h-72 object-contain"
-              src={urlFor(project?.image).url()}
-              alt=""
+              src={`${process.env.NEXT_PUBLIC_SERVER_URL}${project?.image}`}
+              alt={project?.title || "Project image"}
             />
 
             <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
@@ -45,8 +44,8 @@ export default function Projects({ projects }: Props) {
                   <img
                     key={technology._id}
                     className="h-10 w-10 rounded-full object-cover"
-                    src={urlFor(technology?.image).url()}
-                    alt=""
+                    src={`${process.env.NEXT_PUBLIC_SERVER_URL}${technology?.image}`}
+                    alt={technology?.title || "Technology"}
                   />
                 ))}
               </div>
