@@ -14,7 +14,7 @@ type Inputs = {
 export default function ContactMe({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:mitch.sparrow@hotmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}.${formData.message}`;
+    window.location.href = `mailto:amraouikhireddine@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}.${formData.message}`;
   };
 
   return (
@@ -31,18 +31,18 @@ export default function ContactMe({}: Props) {
         <div className="space-y-1 md:space-y-3 lg:space-y-3 xl:space-y-3 2xl:space-y-5">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-darkGreen h-7 w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl lg:text-2xl">+44 78 108 35 079</p>
+            <p className="text-lg md:text-2xl lg:text-2xl">+213791351008 / +213541700084</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-darkGreen h-7 w-7 animate-pulse" />
             <p className="text-lg md:text-2xl lg:text-2xl">
-              mitch.sparrow@hotmail.com
+              amraouikhireddine@gmail.com
             </p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-darkGreen h-7 w-7 animate-pulse" />
             <p className="text-lg md:text-2xl lg:text-2xl">
-              Glasgow, United Kingdom
+              Boumerdes, Algeria
             </p>
           </div>
         </div>

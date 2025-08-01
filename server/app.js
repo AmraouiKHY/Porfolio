@@ -15,7 +15,7 @@ const pageInfo = {
   _id: "1",
   name: "Khireddine Amraoui",
   role: "AI and Data Science Engineer",
-  heroImage: "/uploads/hero-image.jpg",
+  heroImage: "/uploads/profile-pic.JPG",
   backgroundInformation: "AI and Data Science engineering graduate with expertise in machine learning, deep learning, and natural language processing. Skilled in building secure, scalable AI systems, including multi-agent architectures and LLM-driven automation. Experienced in developing predictive models, NLP pipelines, and computer vision solutions for real-world applications.",
   profilePic: "/uploads/profile-pic.JPG",
   phoneNumber: "+213791351008 / +213541700084",
@@ -95,7 +95,7 @@ const projects = [
   {
     _id: "1",
     title: "Reinforcement Learning for Ramp Metering",
-    image: "/uploads/rl-traffic.jpg",
+    image: "/uploads/rl-traffic.png",
     summary: "Training Q-learning and Deep Q-learning on a SUMO network to optimize traffic flow on highways and ramps with and without traffic lights.",
     technologies: [
       { _id: "tech1", title: "Python", image: "/uploads/python.png" },
@@ -109,7 +109,7 @@ const projects = [
   {
     _id: "2",
     title: "Arabic and English Sign Languages Recognition",
-    image: "/uploads/sign-language.jpg",
+    image: "/uploads/sign-language.png",
     summary: "Built a deep learning-based image classification model to recognize hand signs in both Arabic and English using convolutional neural networks (CNNs).",
     technologies: [
       { _id: "tech5", title: "TensorFlow", image: "/uploads/tensorflow.png" },
@@ -123,7 +123,7 @@ const projects = [
   {
     _id: "3",
     title: "Multi-Agent System for Data Science Automation",
-    image: "/uploads/multi-agent.jpg",
+    image: "/uploads/multi-agent.png",
     summary: "Secure, modular multi-agent system using LangGraph and FastAPI to automate end-to-end data science workflows with LLM-driven orchestration.",
     technologies: [
       { _id: "tech9", title: "LangGraph", image: "/uploads/langgraph.png" },
@@ -137,7 +137,7 @@ const projects = [
   {
     _id: "4",
     title: "Forest Fire Detection Platform",
-    image: "/uploads/forest-fire.jpg",
+    image: "/uploads/forest-fire.png",
     summary: "Multi-platform content scraper and Transformer-based image classification system for real-time forest fire detection and monitoring across Algeria.",
     technologies: [
       { _id: "tech13", title: "Transformers", image: "/uploads/transformers.png" },
@@ -151,7 +151,7 @@ const projects = [
   {
     _id: "5",
     title: "J'reside - University Residence Management",
-    image: "/uploads/jreside.jpg",
+    image: "/uploads/jreside.png",
     summary: "Mobile application developed with Flutter for university residence management, facilitating communication between administrators and residents.",
     technologies: [
       { _id: "tech17", title: "Flutter", image: "/uploads/flutter.png" },
