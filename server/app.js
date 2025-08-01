@@ -17,7 +17,7 @@ const pageInfo = {
   role: "AI and Data Science Engineer",
   heroImage: "/uploads/hero-image.jpg",
   backgroundInformation: "AI and Data Science engineering graduate with expertise in machine learning, deep learning, and natural language processing. Skilled in building secure, scalable AI systems, including multi-agent architectures and LLM-driven automation. Experienced in developing predictive models, NLP pipelines, and computer vision solutions for real-world applications.",
-  profilePic: "/uploads/profile-pic.jpg",
+  profilePic: "/uploads/profile-pic.JPG",
   phoneNumber: "+213791351008 / +213541700084",
   email: "amraouikhireddine@gmail.com",
   address: "Bejaia, Algeria"
@@ -317,11 +317,6 @@ const socials = [
     title: "Email",
     url: "mailto:amraouikhireddine@gmail.com"
   },
-  {
-    _id: "4",
-    title: "Instagram",
-    url: ""
-  }
 ];
 
 // Routes
