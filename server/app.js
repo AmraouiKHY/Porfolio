@@ -103,8 +103,8 @@ const projects = [
       { _id: "tech3", title: "SUMO", image: "/uploads/sumo.png" },
       { _id: "tech4", title: "Deep Q-Learning", image: "/uploads/dql.png" }
     ],
-    linkToBuild: "https://github.com/AmraouiKHY/rl-ramp-metering",
-    githubLink: "https://github.com/AmraouiKHY/rl-ramp-metering"
+    linkToBuild: "",
+    githubLink: ""
   },
   {
     _id: "2",
@@ -117,8 +117,8 @@ const projects = [
       { _id: "tech7", title: "Computer Vision", image: "/uploads/cv.png" },
       { _id: "tech8", title: "Python", image: "/uploads/python.png" }
     ],
-    linkToBuild: "https://github.com/AmraouiKHY/sign-language-recognition",
-    githubLink: "https://github.com/AmraouiKHY/sign-language-recognition"
+    linkToBuild: "",
+    githubLink: ""
   },
   {
     _id: "3",
@@ -131,8 +131,8 @@ const projects = [
       { _id: "tech11", title: "LLMs", image: "/uploads/llm.png" },
       { _id: "tech12", title: "Microservices", image: "/uploads/microservices.png" }
     ],
-    linkToBuild: "https://github.com/AmraouiKHY/multi-agent-ds",
-    githubLink: "https://github.com/AmraouiKHY/multi-agent-ds"
+    linkToBuild: "",
+    githubLink: ""
   },
   {
     _id: "4",
@@ -145,8 +145,8 @@ const projects = [
       { _id: "tech15", title: "Web Scraping", image: "/uploads/scraping.png" },
       { _id: "tech16", title: "Data Visualization", image: "/uploads/visualization.png" }
     ],
-    linkToBuild: "https://github.com/AmraouiKHY/forest-fire-detection",
-    githubLink: "https://github.com/AmraouiKHY/forest-fire-detection"
+    linkToBuild: "",
+    githubLink: ""
   },
   {
     _id: "5",
@@ -159,8 +159,8 @@ const projects = [
       { _id: "tech19", title: "Mobile Development", image: "/uploads/mobile.png" },
       { _id: "tech20", title: "Firebase", image: "/uploads/firebase.png" }
     ],
-    linkToBuild: "https://github.com/AmraouiKHY/jreside",
-    githubLink: "https://github.com/AmraouiKHY/jreside"
+    linkToBuild: "",
+    githubLink: ""
   },
   {
     _id: "6",
@@ -173,8 +173,8 @@ const projects = [
       { _id: "tech23", title: "Python", image: "/uploads/python.png" },
       { _id: "tech24", title: "Scikit-learn", image: "/uploads/sklearn.png" }
     ],
-    linkToBuild: "https://github.com/AmraouiKHY/fraud-detection",
-    githubLink: "https://github.com/AmraouiKHY/fraud-detection"
+    linkToBuild: "",
+    githubLink: ""
   }
 ];
 
@@ -320,7 +320,7 @@ const socials = [
   {
     _id: "4",
     title: "Instagram",
-    url: "https://instagram.com/khireddine_amraoui"
+    url: ""
   }
 ];
 
