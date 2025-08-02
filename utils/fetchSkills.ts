@@ -3,7 +3,8 @@
 import { Skill } from "../typings";
 
 export const fetchSkills = async() => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/skills`);
+    const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000';
+    const res = await fetch(`${baseUrl}/api/skills`);
 
     const data = await res.json();
     const skills: Skill[] = data.skills;
