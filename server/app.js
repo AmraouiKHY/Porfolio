@@ -165,7 +165,7 @@ const projects = [
   {
     _id: "6",
     title: "Money Lions Fraud Detection",
-    image: "/uploads/fraud-detection.jpg",
+    image: "/uploads/fraud-detection.png",
     summary: "Machine learning model to detect fraudulent transactions using advanced classification algorithms and oversampling techniques to handle class imbalances.",
     technologies: [
       { _id: "tech21", title: "Machine Learning", image: "/uploads/ml.png" },

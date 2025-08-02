@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         lightGreen: "#68B2A0",
         darkGreen: "#2C6975",
+        professionalDark: "#2C3E50",
+        professionalBlue: "#34495E",
         lightBackground: "#F8F8F8",
         darkBackground: "#22262D",
         darkBlack: "#000000",

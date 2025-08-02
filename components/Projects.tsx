@@ -10,47 +10,47 @@ export default function Projects({ projects }: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className=" h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 py-20"
     >
-      <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-gray-500 text-xl md:text-2xl">
+      <h3 className="absolute top-16 left-1/2 transform -translate-x-1/2 uppercase tracking-[20px] text-professionalDark text-xl md:text-2xl font-semibold">
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-darkGreen/80">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-professionalBlue/80 mt-16">
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-20 h-screen"
           >
             <motion.img
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className=" h-28 xl:h-80 md:h-72 object-contain"
+              className="h-24 md:h-40 lg:h-48 xl:h-56 object-contain rounded-lg shadow-lg"
               src={`${process.env.NEXT_PUBLIC_SERVER_URL}${project?.image}`}
               alt={project?.title || "Project image"}
             />
 
-            <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
-                <span className="underline decoration-darkGreen/50">
+            <div className="space-y-5 md:space-y-8 px-4 md:px-10 max-w-4xl">
+              <h4 className="text-lg md:text-2xl lg:text-3xl font-semibold text-center text-professionalDark">
+                <span className="underline decoration-professionalBlue/50">
                   Project {i + 1}:
                 </span>{" "}
                 {project?.title}
               </h4>
-              <div className="flex items-center space-x-2 justify-center ">
+              <div className="flex items-center space-x-3 justify-center flex-wrap gap-2">
                 {project?.technologies.map((technology) => (
                   <img
                     key={technology._id}
-                    className="h-10 w-10 rounded-full object-cover"
+                    className="h-8 w-8 md:h-10 md:w-10 rounded-full object-cover border-2 border-professionalBlue/20"
                     src={`${process.env.NEXT_PUBLIC_SERVER_URL}${technology?.image}`}
                     alt={technology?.title || "Technology"}
                   />
                 ))}
               </div>
 
-              <p className="text-sm md:text-md lg:text-lg text-justify ">
+              <p className="text-sm md:text-base lg:text-lg text-justify text-professionalDark/80 leading-relaxed">
                 {project?.summary}
               </p>
             </div>
@@ -58,7 +58,7 @@ export default function Projects({ projects }: Props) {
         ))}
       </div>
 
-      <div className="w-full absolute top-[20%] md:top-[30%] bg-darkGreen/40 left-0 h-[500px] -skew-y-12"></div>
+      <div className="w-full absolute top-[25%] md:top-[35%] bg-professionalBlue/20 left-0 h-[400px] -skew-y-12"></div>
     </motion.div>
   );
 }
