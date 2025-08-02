@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const { summary } = require('framer-motion/client');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -175,7 +176,20 @@ const projects = [
     ],
     linkToBuild: "",
     githubLink: ""
+  },
+  {
+    _id:"7",
+    title: "Guaspiless",
+    image: "/uploads/guaspiless.png",
+    summary: "university project ,A website that fights against food waste.a user can order shopping carts according to their needs and location.",
+    technologies: [
+      { _id: "tech25", title: "React", image: "/uploads/react.png" },
+      { _id: "tech26", title: "Node.js", image: "/uploads/nodejs.png" },
+      { _id: "tech27", title: "Tailwind CSS", image: "/uploads/tailwind.png" },
+      { _id: "tech28", title: "MongoDB", image: "/uploads/mongodb.png" }
+    ]
   }
+
 ];
 
 const skills = [
