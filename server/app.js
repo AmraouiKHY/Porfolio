@@ -20,7 +20,7 @@ const pageInfo = {
   profilePic: "/uploads/profile-pic.JPG",
   phoneNumber: "+213791351008 / +213541700084",
   email: "amraouikhireddine@gmail.com",
-  address: "Bejaia, Algeria"
+  address: "Boumerdes, Algeria"
 };
 
 const experiences = [
