@@ -17,9 +17,6 @@
 
 # server
 server/node_modules
-server/uploads/*.jpg
-server/uploads/*.png
-server/uploads/*.gif
 
 # misc
 .DS_Store
