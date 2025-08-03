@@ -30,7 +30,7 @@ export default function About({ pageInfo }: Props) {
         }}
         viewport={{ once: true }}
         className="mb-8 md:mb-0 flex-shrink-0 w-40 h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full md:rounded-lg object-cover shadow-2xl border-4 border-professionalBlue/20"
-        src={`${process.env.NEXT_PUBLIC_SERVER_URL}${pageInfo?.profilePic}`}
+        src={pageInfo?.profilePic || "/images/profile-pic.JPG"}
         alt={pageInfo?.name || "Profile picture"}
       />
       

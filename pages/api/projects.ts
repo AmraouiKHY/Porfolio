@@ -4,13 +4,13 @@ const projects = [
   {
     _id: "1",
     title: "Reinforcement Learning for Ramp Metering",
-    image: "/uploads/rl-traffic.png",
+    image: "/images/rl-traffic.png",
     summary: "Training Q-learning and Deep Q-learning on a SUMO network to optimize traffic flow on highways and ramps with and without traffic lights.",
     technologies: [
-      { _id: "tech1", title: "Python", image: "/uploads/python.png" },
-      { _id: "tech2", title: "Reinforcement Learning", image: "/uploads/rl.png" },
-      { _id: "tech3", title: "SUMO", image: "/uploads/sumo.png" },
-      { _id: "tech4", title: "Deep Q-Learning", image: "/uploads/dql.png" }
+      { _id: "tech1", title: "Python", image: "/images/python.png" },
+      { _id: "tech2", title: "Reinforcement Learning", image: "/images/rl.png" },
+      { _id: "tech3", title: "SUMO", image: "/images/sumo.png" },
+      { _id: "tech4", title: "Deep Q-Learning", image: "/images/dql.png" }
     ],
     linkToBuild: "",
     githubLink: ""
@@ -18,13 +18,13 @@ const projects = [
   {
     _id: "2",
     title: "Arabic and English Sign Languages Recognition",
-    image: "/uploads/sign-language.png",
+    image: "/images/sign-language.png",
     summary: "Built a deep learning-based image classification model to recognize hand signs in both Arabic and English using convolutional neural networks (CNNs).",
     technologies: [
-      { _id: "tech5", title: "TensorFlow", image: "/uploads/tensorflow.png" },
-      { _id: "tech6", title: "CNN", image: "/uploads/cnn.png" },
-      { _id: "tech7", title: "Computer Vision", image: "/uploads/cv.png" },
-      { _id: "tech8", title: "Python", image: "/uploads/python.png" }
+      { _id: "tech5", title: "TensorFlow", image: "/images/tensorflow.png" },
+      { _id: "tech6", title: "CNN", image: "/images/cnn.png" },
+      { _id: "tech7", title: "Computer Vision", image: "/images/cv.png" },
+      { _id: "tech8", title: "Python", image: "/images/python.png" }
     ],
     linkToBuild: "",
     githubLink: ""
@@ -32,13 +32,13 @@ const projects = [
   {
     _id: "3",
     title: "Multi-Agent System for Data Science Automation",
-    image: "/uploads/multi-agent.png",
+    image: "/images/multi-agent.png",
     summary: "Secure, modular multi-agent system using LangGraph and FastAPI to automate end-to-end data science workflows with LLM-driven orchestration.",
     technologies: [
-      { _id: "tech9", title: "LangGraph", image: "/uploads/langgraph.png" },
-      { _id: "tech10", title: "FastAPI", image: "/uploads/fastapi.png" },
-      { _id: "tech11", title: "LLMs", image: "/uploads/llm.png" },
-      { _id: "tech12", title: "Microservices", image: "/uploads/microservices.png" }
+      { _id: "tech9", title: "LangGraph", image: "/images/langgraph.png" },
+      { _id: "tech10", title: "FastAPI", image: "/images/fastapi.png" },
+      { _id: "tech11", title: "LLMs", image: "/images/llm.png" },
+      { _id: "tech12", title: "Microservices", image: "/images/microservices.png" }
     ],
     linkToBuild: "",
     githubLink: ""
@@ -46,13 +46,13 @@ const projects = [
   {
     _id: "4",
     title: "Forest Fire Detection Platform",
-    image: "/uploads/forest-fire.png",
+    image: "/images/forest-fire.png",
     summary: "Multi-platform content scraper and Transformer-based image classification system for real-time forest fire detection and monitoring across Algeria.",
     technologies: [
-      { _id: "tech13", title: "Transformers", image: "/uploads/transformers.png" },
-      { _id: "tech14", title: "NLP", image: "/uploads/nlp.png" },
-      { _id: "tech15", title: "Web Scraping", image: "/uploads/scraping.png" },
-      { _id: "tech16", title: "Data Visualization", image: "/uploads/visualization.png" }
+      { _id: "tech13", title: "Transformers", image: "/images/transformers.png" },
+      { _id: "tech14", title: "NLP", image: "/images/nlp.png" },
+      { _id: "tech15", title: "Web Scraping", image: "/images/scraping.png" },
+      { _id: "tech16", title: "Data Visualization", image: "/images/visualization.png" }
     ],
     linkToBuild: "",
     githubLink: ""
@@ -60,13 +60,13 @@ const projects = [
   {
     _id: "5",
     title: "J'reside - University Residence Management",
-    image: "/uploads/jreside.png",
+    image: "/images/jreside.png",
     summary: "Mobile application developed with Flutter for university residence management, facilitating communication between administrators and residents.",
     technologies: [
-      { _id: "tech17", title: "Flutter", image: "/uploads/flutter.png" },
-      { _id: "tech18", title: "Dart", image: "/uploads/dart.png" },
-      { _id: "tech19", title: "Mobile Development", image: "/uploads/mobile.png" },
-      { _id: "tech20", title: "Firebase", image: "/uploads/firebase.png" }
+      { _id: "tech17", title: "Flutter", image: "/images/flutter.png" },
+      { _id: "tech18", title: "Dart", image: "/images/dart.png" },
+      { _id: "tech19", title: "Mobile Development", image: "/images/mobile.png" },
+      { _id: "tech20", title: "Firebase", image: "/images/firebase.png" }
     ],
     linkToBuild: "",
     githubLink: ""
@@ -74,13 +74,13 @@ const projects = [
   {
     _id: "6",
     title: "Money Lions Fraud Detection",
-    image: "/uploads/fraud-detection.png",
+    image: "/images/fraud-detection.png",
     summary: "Machine learning model to detect fraudulent transactions using advanced classification algorithms and oversampling techniques to handle class imbalances.",
     technologies: [
-      { _id: "tech21", title: "Machine Learning", image: "/uploads/ml.png" },
-      { _id: "tech22", title: "Classification", image: "/uploads/classification.png" },
-      { _id: "tech23", title: "Python", image: "/uploads/python.png" },
-      { _id: "tech24", title: "Scikit-learn", image: "/uploads/sklearn.png" }
+      { _id: "tech21", title: "Machine Learning", image: "/images/ml.png" },
+      { _id: "tech22", title: "Classification", image: "/images/classification.png" },
+      { _id: "tech23", title: "Python", image: "/images/python.png" },
+      { _id: "tech24", title: "Scikit-learn", image: "/images/sklearn.png" }
     ],
     linkToBuild: "",
     githubLink: ""
@@ -88,13 +88,13 @@ const projects = [
   {
     _id:"7",
     title: "Guaspiless",
-    image: "/uploads/guaspiless.png",
+    image: "/images/guaspiless.png",
     summary: "university project ,A website that fights against food waste.a user can order shopping carts according to their needs and location.",
     technologies: [
-      { _id: "tech25", title: "React", image: "/uploads/react.png" },
-      { _id: "tech26", title: "Node.js", image: "/uploads/nodejs.png" },
-      { _id: "tech27", title: "Tailwind CSS", image: "/uploads/tailwind.png" },
-      { _id: "tech28", title: "MongoDB", image: "/uploads/mongodb.png" }
+      { _id: "tech25", title: "React", image: "/images/react.png" },
+      { _id: "tech26", title: "Node.js", image: "/images/nodejs.png" },
+      { _id: "tech27", title: "Tailwind CSS", image: "/images/tailwind.png" },
+      { _id: "tech28", title: "MongoDB", image: "/images/mongodb.png" }
     ],
     linkToBuild: "",
     githubLink: ""

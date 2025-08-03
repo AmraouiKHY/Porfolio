@@ -24,7 +24,7 @@ export default function Hero({ pageInfo }: Props) {
 
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover shadow-2xl border-4 border-professionalBlue/30"
-        src={`${process.env.NEXT_PUBLIC_SERVER_URL}${pageInfo?.heroImage}`}
+        src={pageInfo?.heroImage || "/images/profile-pic.JPG"}
         alt={pageInfo?.name || "Hero image"}
       />
 

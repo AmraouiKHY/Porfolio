@@ -37,7 +37,7 @@ export default function EducationComponent({ education }: Props) {
                 viewport={{ once: true }}
                 transition={{ duration: 1.2 }}
                 className="h-20 md:h-20 rounded-full object-cover shadow-lg border-2 border-professionalBlue/20 mb-2"
-                src={`${process.env.NEXT_PUBLIC_SERVER_URL}${edu?.institutionLogo}`}
+                src={edu?.institutionLogo || "/images/estin.png"}
                 alt={edu?.institution || "Institution logo"}
               />
 

@@ -11,7 +11,7 @@ const education = [
     dateEnded: "2025-07-02",
     isCurrentlyStudying: false,
     description: "Pursuing a comprehensive education in AI and Data Science, focusing on machine learning, deep learning, and natural language processing. Engaged in hands-on projects and research to apply theoretical knowledge to practical challenges.",
-    institutionLogo: "/uploads/estin.png",
+    institutionLogo: "/images/estin.png",
     institutionWebsite: "https://estin.dz/"
   },
   {
@@ -22,7 +22,7 @@ const education = [
     dateEnded: "2025-06-25",
     isCurrentlyStudying: false,
     description: "Advanced studies in AI and Data Science, focusing on cutting-edge technologies and methodologies. Engaged in research projects and collaborations to innovate in the field of AI.",
-    institutionLogo: "/uploads/estin.png",
+    institutionLogo: "/images/estin.png",
     institutionWebsite: "https://estin.dz/"
   }
 

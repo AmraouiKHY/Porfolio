@@ -28,7 +28,7 @@ export default function Projects({ projects }: Props) {
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
               className="h-24 md:h-40 lg:h-48 xl:h-56 object-contain rounded-lg shadow-lg"
-              src={`${process.env.NEXT_PUBLIC_SERVER_URL}${project?.image}`}
+              src={project?.image || "/images/default-project-image.png"}
               alt={project?.title || "Project image"}
             />
 
@@ -44,7 +44,7 @@ export default function Projects({ projects }: Props) {
                   <img
                     key={technology._id}
                     className="h-8 w-8 md:h-10 md:w-10 rounded-full object-cover border-2 border-professionalBlue/20"
-                    src={`${process.env.NEXT_PUBLIC_SERVER_URL}${technology?.image}`}
+                    src={technology?.image || "/images/default-technology-icon.png"}
                     alt={technology?.title || "Technology"}
                   />
                 ))}

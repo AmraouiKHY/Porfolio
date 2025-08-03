@@ -13,7 +13,7 @@ export default function ExperienceCard({ experience }: Props) {
         viewport={{ once: true }}
         transition={{ duration: 1.2 }}
         className="md:invisible xl:visible md:h-0 w-24 h-24 md:w-0 rounded-full xl:w-[120px] xl:h-[120px] mb-2 object-cover object-center shadow-lg border-2 border-professionalBlue/20"
-        src={`${process.env.NEXT_PUBLIC_SERVER_URL}${experience?.companyImage}`}
+        src={experience?.companyImage || "/images/default-company-logo.png"}
         alt={experience?.company || "Company logo"}
       />
       <div className="w-full px-0 md:px-6">
@@ -30,7 +30,7 @@ export default function ExperienceCard({ experience }: Props) {
                 <img
                   key={technology._id}
                   className="h-8 w-8 md:h-10 md:w-10 rounded-full object-cover border border-professionalBlue/20 shadow-sm"
-                  src={`${process.env.NEXT_PUBLIC_SERVER_URL}${technology?.image}`}
+                  src={technology?.image || "/images/default-technology-icon.png"}
                   alt={technology?.title || "Technology"}
                 />
               ))}
@@ -42,7 +42,7 @@ export default function ExperienceCard({ experience }: Props) {
             viewport={{ once: true }}
             transition={{ duration: 1.2 }}
             className="invisible md:visible xl:invisible xl:h-0 xl:w-0 h-0 w-0 md:h-24 md:w-24 rounded-full mb-0 object-cover object-center shadow-lg border-2 border-professionalBlue/20"
-            src={`${process.env.NEXT_PUBLIC_SERVER_URL}${experience?.companyImage}`}
+            src={experience?.companyImage || "/images/default-company-logo.png"}
             alt={experience?.company || "Company logo"}
           />
         </div>

@@ -15,7 +15,7 @@ export default function Skill({ skill, directionLeft }: Props) {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         className="rounded-full border-2 border-professionalBlue object-cover w-14 h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 filter group-hover:grayscale transition duration-300 ease-in-out shadow-lg"
-        src={`${process.env.NEXT_PUBLIC_SERVER_URL}${skill?.image}`}
+        src={skill?.image || "/images/default-skill-icon.png"}
         alt={skill?.title || "Skill"}
       />
       <div className="absolute opacity-0 group-hover:opacity-90 transition duration-300 ease-in-out group-hover:bg-professionalDark w-14 h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 rounded-full z-0">
