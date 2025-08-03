@@ -37,6 +37,17 @@ export interface Experience extends BaseEntity {
     technologies: Technology[];
 }
 
+export interface Education extends BaseEntity {
+    institution: string;
+    degree: string;
+    dateStarted: string;
+    dateEnded: string | null;
+    isCurrentlyStudying: boolean;
+    description: string;
+    institutionLogo: string;
+    institutionWebsite: string;
+}
+
 export interface Project extends BaseEntity {
     title: string;
     linkToBuild: string;

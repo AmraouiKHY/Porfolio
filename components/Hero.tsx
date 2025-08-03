@@ -10,9 +10,9 @@ export default function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
       `Hi, the name's ${pageInfo?.name}`,
-      "I like riding my 🚲",
-      "I_like_to_code.py",
-      "And I'm addicted to ☕️",
+      "Addicted to surfing the web",
+      "I Like eastern music",
+      "I like coding 🚀",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -40,6 +40,9 @@ export default function Hero({ pageInfo }: Props) {
         <div className="pt-5 space-x-2">
           <Link href="#about">
             <button className="heroButton border-professionalBlue text-professionalDark hover:bg-professionalBlue hover:text-white transition-all duration-300">About</button>
+          </Link>
+          <Link href="#education">
+            <button className="heroButton border-professionalBlue text-professionalDark hover:bg-professionalBlue hover:text-white transition-all duration-300">Education</button>  
           </Link>
           <Link href="#experience">
             <button className="heroButton border-professionalBlue text-professionalDark hover:bg-professionalBlue hover:text-white transition-all duration-300">Experience</button>
