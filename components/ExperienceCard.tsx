@@ -1,63 +1,127 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import { Experience } from "../typings";
 
 type Props = { experience: Experience };
 
 export default function ExperienceCard({ experience }: Props) {
+  const [showModal, setShowModal] = useState(false);
+  
   return (
-    <article className="flex drop-shadow-xl flex-col rounded-3xl items-center space-y-0 flex-shrink-0 w-72 md:w-[600px] xl:w-[700px] snap-center bg-white bg-gradient-to-tr from-white to-professionalBlue/10 p-5 md:p-8 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 border border-professionalBlue/20">
-      <motion.img
-        initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.2 }}
-        className="md:invisible xl:visible md:h-0 w-24 h-24 md:w-0 rounded-full xl:w-[120px] xl:h-[120px] mb-2 object-cover object-center shadow-lg border-2 border-professionalBlue/20"
-        src={experience?.companyImage || "/images/default-company-logo.png"}
-        alt={experience?.company || "Company logo"}
-      />
-      <div className="w-full px-0 md:px-6">
-        <div className="md:flex md:justify-between items-center">
-          <div>
-            <h4 className="text-lg md:text-2xl lg:text-3xl font-semibold text-professionalDark">
-              {experience?.jobTitle}
-            </h4>
-            <p className="font-bold text-md md:text-xl lg:text-2xl mt-1 text-professionalBlue">
-              {experience?.company}
-            </p>
-            <div className="flex space-x-2 my-3 flex-wrap gap-1">
-              {experience?.technologies.map((technology) => (
-                <img
-                  key={technology._id}
-                  className="h-8 w-8 md:h-10 md:w-10 rounded-full object-cover border border-professionalBlue/20 shadow-sm"
-                  src={technology?.image || "/images/default-technology-icon.png"}
-                  alt={technology?.title || "Technology"}
-                />
-              ))}
-            </div>
+    <>
+      <article 
+        className="flex drop-shadow-xl flex-col rounded-3xl items-center space-y-4 flex-shrink-0 w-72 md:w-[600px] xl:w-[700px] snap-center bg-white bg-gradient-to-tr from-white to-professionalBlue/10 p-5 md:p-8 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 border border-professionalBlue/20"
+        onClick={() => setShowModal(true)}
+      >
+        <motion.img
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+          className="w-24 h-24 rounded-full object-contain bg-white p-2 shadow-lg border-2 border-professionalBlue/20"
+          src={experience?.companyImage || "/images/default-company-logo.png"}
+          alt={experience?.company || "Company logo"}
+        />
+        <div className="w-full px-0 md:px-6 text-center">
+          <h4 className="text-base md:text-xl lg:text-2xl font-semibold text-professionalDark">
+            {experience?.jobTitle}
+          </h4>
+          <p className="font-bold text-sm md:text-lg lg:text-xl mt-1 text-professionalBlue">
+            {experience?.company}
+          </p>
+          <div className="flex justify-center space-x-2 my-3 flex-wrap gap-2">
+            {experience?.technologies.map((technology) => (
+              <img
+                key={technology._id}
+                className="w-8 h-8 rounded-full object-contain bg-white p-1 border border-professionalBlue/20 shadow-sm"
+                src={technology?.image || "/images/default-technology-icon.png"}
+                alt={technology?.title || "Technology"}
+              />
+            ))}
           </div>
-          <motion.img
-            initial={{ opacity: 0, y: -100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.2 }}
-            className="invisible md:visible xl:invisible xl:h-0 xl:w-0 h-0 w-0 md:h-24 md:w-24 rounded-full mb-0 object-cover object-center shadow-lg border-2 border-professionalBlue/20"
-            src={experience?.companyImage || "/images/default-company-logo.png"}
-            alt={experience?.company || "Company logo"}
-          />
+          <p className="uppercase py-2 md:py-4 text-professionalBlue/70 text-xs md:text-sm font-medium">
+            {new Date(experience?.dateStarted).toDateString()} -{" "}
+            {experience.isCurrentlyWorkingHere
+              ? "Present"
+              : experience?.dateEnded ? new Date(experience.dateEnded).toDateString() : "Unknown"}
+          </p>
+          <p className="text-professionalBlue/60 text-xs mt-2">Click to see details</p>
         </div>
-        <p className="uppercase py-2 md:py-4 text-professionalBlue/70 text-xs md:text-sm font-medium">
-          {new Date(experience?.dateStarted).toDateString()} -{" "}
-          {experience.isCurrentlyWorkingHere
-            ? "Present"
-            : experience?.dateEnded ? new Date(experience.dateEnded).toDateString() : "Unknown"}
-        </p>
-      </div>
-      <ul className="px-0 md:px-6 list-disc text-professionalDark/80 space-y-2 pr-3 text-justify ml-0 text-sm md:text-base pl-5 overflow-y-scroll scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-professionalBlue/60 leading-relaxed">
-        {experience?.points.map((point, i) => (
-          <li key={i}>{point}</li>
-        ))}
-      </ul>
-    </article>
+      </article>
+
+      {/* Modal Popup */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="bg-white rounded-3xl p-6 md:p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto border border-professionalBlue/20 shadow-2xl"
+          >
+            {/* Modal Header */}
+            <div className="flex justify-between items-start mb-6">
+              <div className="flex items-center space-x-4">
+                <img
+                  className="w-16 h-16 rounded-full object-contain bg-white p-2 shadow-lg border-2 border-professionalBlue/20"
+                  src={experience?.companyImage || "/images/default-company-logo.png"}
+                  alt={experience?.company || "Company logo"}
+                />
+                <div>
+                  <h3 className="text-xl md:text-2xl font-semibold text-professionalDark">
+                    {experience?.jobTitle}
+                  </h3>
+                  <p className="font-bold text-lg md:text-xl text-professionalBlue">
+                    {experience?.company}
+                  </p>
+                </div>
+              </div>
+              <button 
+                onClick={() => setShowModal(false)}
+                className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+              >
+                ×
+              </button>
+            </div>
+
+            {/* Technologies */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold text-professionalDark mb-3">Technologies Used</h4>
+              <div className="flex flex-wrap gap-3">
+                {experience?.technologies.map((technology) => (
+                  <div key={technology._id} className="flex items-center space-x-2 bg-gray-100 rounded-full px-3 py-2">
+                    <img
+                      className="w-6 h-6 rounded-full object-contain bg-white p-1"
+                      src={technology?.image || "/images/default-technology-icon.png"}
+                      alt={technology?.title || "Technology"}
+                    />
+                    <span className="text-sm font-medium text-professionalDark">{technology?.title}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Date Range */}
+            <div className="mb-6">
+              <p className="text-professionalBlue/70 text-sm font-medium">
+                {new Date(experience?.dateStarted).toDateString()} -{" "}
+                {experience.isCurrentlyWorkingHere
+                  ? "Present"
+                  : experience?.dateEnded ? new Date(experience.dateEnded).toDateString() : "Unknown"}
+              </p>
+            </div>
+
+            {/* Job Responsibilities */}
+            <div>
+              <h4 className="text-lg font-semibold text-professionalDark mb-3">Key Responsibilities & Achievements</h4>
+              <ul className="list-disc text-professionalDark/80 space-y-3 pl-5 text-sm md:text-base leading-relaxed">
+                {experience?.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </>
   );
 }

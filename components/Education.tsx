@@ -10,14 +10,14 @@ export default function EducationComponent({ education }: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-6 md:px-10 justify-evenly mx-auto items-center py-20"
+      className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-5 md:px-10 justify-evenly mx-auto items-center py-20"
     >
       <h3 className="absolute top-16 left-1/2 transform -translate-x-1/2 uppercase tracking-[20px] text-professionalDark text-xl md:text-2xl font-semibold">
         Education
       </h3>
 
       {/* Education cards */}
-      <div className="w-screen md:w-full text-left pb-5 md:pb-10 flex space-x-5 overflow-x-scroll p-6 md:p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-professionalBlue/80 mt-16">
+      <div className="w-full text-left pb-5 md:pb-10 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 p-6 md:p-10 mt-16">
         {education
           ?.slice() // make a shallow copy so we don't mutate the original array
         //   .sort(
@@ -28,7 +28,7 @@ export default function EducationComponent({ education }: Props) {
           .map((edu) => (
             <article 
               key={edu._id} 
-              className="flex drop-shadow-xl flex-col rounded-3xl items-center space-y-4 flex-shrink-0 w-72 md:w-[600px] xl:w-[700px] snap-center bg-white bg-gradient-to-tr from-white to-professionalBlue/10 p-6 md:p-8 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 border border-professionalBlue/20"
+              className="flex drop-shadow-xl flex-col rounded-3xl items-center space-y-4 w-full max-w-md md:max-w-lg lg:max-w-xl h-auto min-h-[500px] bg-white bg-gradient-to-tr from-white to-professionalBlue/10 p-6 md:p-8 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 border border-professionalBlue/20"
             >
               {/* Institution Logo */}
               <motion.img
@@ -36,19 +36,19 @@ export default function EducationComponent({ education }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.2 }}
-                className="h-20 md:h-20 rounded-full object-cover shadow-lg border-2 border-professionalBlue/20 mb-2"
+                className="h-16 md:h-18 rounded-full object-contain bg-white p-2 shadow-lg border-2 border-professionalBlue/20 mb-2"
                 src={edu?.institutionLogo || "/images/estin.png"}
                 alt={edu?.institution || "Institution logo"}
               />
 
               <div className="w-full px-0 md:px-6 text-center">
                 {/* Degree Title */}
-                <h4 className="text-lg md:text-2xl lg:text-3xl font-semibold text-professionalDark mb-2">
+                <h4 className="text-base md:text-xl lg:text-2xl font-semibold text-professionalDark mb-2">
                   {edu?.degree}
                 </h4>
                 
                 {/* Institution Name */}
-                <p className="font-bold text-md md:text-xl lg:text-2xl mt-1 text-professionalBlue mb-3">
+                <p className="font-bold text-sm md:text-lg lg:text-xl mt-1 text-professionalBlue mb-3">
                   {edu?.institution}
                 </p>
 
@@ -66,10 +66,17 @@ export default function EducationComponent({ education }: Props) {
                     Currently Studying
                   </div>
                 )}
+                
+                {/* Graduation Badge */}
+                {edu.graduated && !edu.isCurrentlyStudying && (
+                  <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium mb-4">
+                    ✓ Graduated
+                  </div>
+                )}
               </div>
 
               {/* Description */}
-              <div className="px-0 md:px-6 text-professionalDark/80 text-sm md:text-base leading-relaxed text-justify">
+              <div className="px-0 md:px-6 text-professionalDark/80 text-sm md:text-base leading-relaxed text-justify flex-grow flex items-center">
                 <p>{edu?.description}</p>
               </div>
 

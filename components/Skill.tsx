@@ -14,7 +14,7 @@ export default function Skill({ skill, directionLeft }: Props) {
         initial={{ x: directionLeft ? -80 : 80, opacity: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="rounded-full border-2 border-professionalBlue object-cover w-14 h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 filter group-hover:grayscale transition duration-300 ease-in-out shadow-lg"
+        className="rounded-full border-2 border-professionalBlue object-contain w-14 h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 filter group-hover:grayscale transition duration-300 ease-in-out shadow-lg bg-white p-1"
         src={skill?.image || "/images/default-skill-icon.png"}
         alt={skill?.title || "Skill"}
       />

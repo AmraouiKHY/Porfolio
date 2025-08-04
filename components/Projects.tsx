@@ -43,7 +43,7 @@ export default function Projects({ projects }: Props) {
                 {project?.technologies.map((technology) => (
                   <img
                     key={technology._id}
-                    className="h-8 w-8 md:h-10 md:w-10 rounded-full object-cover border-2 border-professionalBlue/20"
+                    className="h-8 w-8 md:h-10 md:w-10 rounded-full object-contain bg-white p-1 border-2 border-professionalBlue/20"
                     src={technology?.image || "/images/default-technology-icon.png"}
                     alt={technology?.title || "Technology"}
                   />

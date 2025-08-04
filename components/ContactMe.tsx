@@ -23,10 +23,10 @@ export default function ContactMe({}: Props) {
         Contact
       </h3>
       <div className="flex flex-col space-y-4 md:space-y-5 lg:space-y-6 xl:space-y-6 2xl:space-y-8 mt-16">
-        <h4 className="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-center text-professionalDark">
+        {/* <h4 className="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-center text-professionalDark">
           I have got just what you need.{" "}
           <span className="decoration-professionalBlue/50 underline">Lets talk.</span>
-        </h4>
+        </h4> */}
 
         <div className="space-y-1 md:space-y-3 lg:space-y-3 xl:space-y-3 2xl:space-y-5">
           <div className="flex items-center space-x-5 justify-center">

@@ -19,18 +19,20 @@ export const education = [
     dateStarted:"2020-11-18",
     dateEnded: "2025-07-02",
     isCurrentlyStudying: false,
-    description: "Pursuing a comprehensive education in AI and Data Science, focusing on machine learning, deep learning, and natural language processing. Engaged in hands-on projects and research to apply theoretical knowledge to practical challenges.",
+    graduated: true,
+    description: "Completed a comprehensive education in AI and Data Science, focusing on machine learning, deep learning, and natural language processing. Successfully graduated with expertise in practical applications of AI technologies.",
     institutionLogo: "/images/estin.png",
     institutionWebsite: "https://estin.dz/"
   },
   {
     _id: "2",
-    degree: "Master in Ai and Data Science",
+    degree: "Master in AI and Data Science",
     institution: "Ecole Supérieure en Sciences et Technologies de l'Informatique et du Numérique (ESTIN)",
     dateStarted: "2024-09-01",
     dateEnded: "2025-06-25",
     isCurrentlyStudying: false,
-    description: "Advanced studies in AI and Data Science, focusing on cutting-edge technologies and methodologies. Engaged in research projects and collaborations to innovate in the field of AI.",
+    graduated: true,
+    description: "Completed advanced studies in AI and Data Science, focusing on cutting-edge technologies and methodologies. Successfully graduated with specialization in research and innovation in the field of AI.",
     institutionLogo: "/images/estin.png",
     institutionWebsite: "https://estin.dz/"
   }

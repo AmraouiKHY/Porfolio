@@ -43,6 +43,7 @@ export interface Education extends BaseEntity {
     dateStarted: string;
     dateEnded: string | null;
     isCurrentlyStudying: boolean;
+    graduated?: boolean;
     description: string;
     institutionLogo: string;
     institutionWebsite: string;

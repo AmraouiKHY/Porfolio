@@ -29,12 +29,12 @@ export default function About({ pageInfo }: Props) {
           opacity: 1,
         }}
         viewport={{ once: true }}
-        className="mb-8 md:mb-0 flex-shrink-0 w-40 h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full md:rounded-lg object-cover shadow-2xl border-4 border-professionalBlue/20"
+        className="mb-8 md:mb-0 flex-shrink-0 w-48 h-56 md:w-64 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full md:rounded-lg object-cover shadow-2xl border-4 border-professionalBlue/20"
         src={pageInfo?.profilePic || "/images/profile-pic.JPG"}
         alt={pageInfo?.name || "Profile picture"}
       />
       
-      <div className="space-y-6 md:space-y-8 px-4 md:px-8 lg:px-12 max-w-2xl">
+      <div className="space-y-5 md:space-y-5 px-4 md:px-8 lg:px-12 max-w-2xl">
         <h4 className="text-xl md:text-3xl lg:text-4xl font-semibold text-professionalDark">
           Here is a{" "}
           <span className="underline decoration-professionalBlue/50">little</span>{" "}
@@ -43,6 +43,33 @@ export default function About({ pageInfo }: Props) {
         <p className="text-sm md:text-base lg:text-lg text-justify leading-relaxed text-professionalDark/80">
           {pageInfo?.backgroundInformation}
         </p>
+        
+        {/* CV Download Section */}
+        <div className="flex flex-col items-center md:items-start space-y-4">
+          <h5 className="text-lg md:text-xl font-semibold text-professionalDark">
+            Want to know more?
+          </h5>
+          <a
+            href="/cv/KHIREDDINE_AMRAOUI_Resume.pdf"
+            download="Khireddine_Amraoui_CV.pdf"
+            className="inline-flex items-center px-6 py-3 bg-professionalBlue text-white rounded-lg hover:bg-professionalDark transition-colors duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+          >
+            <svg 
+              className="w-5 h-5 mr-3" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+              />
+            </svg>
+            Download My CV
+          </a>
+        </div>
       </div>
     </motion.div>
   );
