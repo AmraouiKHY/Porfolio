@@ -5,12 +5,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import styles from "../styles/Home.module.css";
 import { Experience, PageInfo, Skill, Project, Social, Education } from "../typings";
-import { fetchPageInfo } from "../utils/fetchPageInfo";
-import { fetchExperiences } from "../utils/fetchExperience";
-import { fetchProjects } from "../utils/fetchProjects";
-import { fetchSkills } from "../utils/fetchSkills";
-import { fetchSocials } from "../utils/fetchSocials";
-import { fetchEducation } from "../utils/fetchEducation";
+import { pageInfo, experiences, projects, skills, socials, education } from "../data/staticData";
 import About from "../components/About";
 import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
@@ -125,13 +120,6 @@ const Home = ({ pageInfo, experiences, projects, skills, socials, education }: P
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo = await fetchPageInfo();
-  const experiences = await fetchExperiences();
-  const skills = await fetchSkills();
-  const projects = await fetchProjects();
-  const socials = await fetchSocials();
-  const education = await fetchEducation();
-
   return {
     props: {
       pageInfo,

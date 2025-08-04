@@ -2,8 +2,8 @@ import { Education } from "../typings";
 
 export const fetchEducation = async (): Promise<Education[]> => {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/api/education`);
+    // Use relative URL - no external server needed during build
+    const res = await fetch('/api/education');
     
     if (!res.ok) {
       throw new Error(`Failed to fetch education: ${res.status}`);

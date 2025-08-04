@@ -3,8 +3,12 @@
 import { Skill } from "../typings";
 
 export const fetchSkills = async() => {
-    const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/api/skills`);
+    // Use relative URL - no external server needed during build
+    const res = await fetch('/api/skills');
+
+    if (!res.ok) {
+        throw new Error(`Failed to fetch skills: ${res.status}`);
+    }
 
     const data = await res.json();
     const skills: Skill[] = data.skills;

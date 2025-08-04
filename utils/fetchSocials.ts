@@ -1,8 +1,12 @@
 import { Social } from "../typings";
 
 export const fetchSocials = async () => {
-  const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000';
-  const res = await fetch(`${baseUrl}/api/socials`);
+  // Use relative URL - no external server needed during build
+  const res = await fetch('/api/socials');
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch socials: ${res.status}`);
+  }
 
   const data = await res.json();
   const socials: Social[] = data.socials;
