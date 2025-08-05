@@ -15,6 +15,7 @@ import EducationComponent from "../components/Education";
 import Link from "next/link";
 import { HomeIcon } from "@heroicons/react/24/solid";
 import Script from "next/script";
+import { motion } from "framer-motion";
 
 type Props = {
   pageInfo: PageInfo;
@@ -27,9 +28,12 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, projects, skills, socials, education }: Props) => {
   return (
-    <div
+    <motion.div
       className="bg-lightBackground text-darkBlack h-screen snap-y snap-mandatory
     overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-darkGreen/80"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <Head>
         <link
@@ -70,39 +74,88 @@ const Home = ({ pageInfo, experiences, projects, skills, socials, education }: P
       <Header socials={socials} />
 
       {/* Hero */}
-      <section id="hero" className="snap-start">
+      <motion.section 
+        id="hero" 
+        className="snap-start"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <Hero pageInfo={pageInfo} />
-      </section>
+      </motion.section>
 
       {/* About */}
-      <section id="about" className="snap-center">
+      <motion.section 
+        id="about" 
+        className="snap-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <About pageInfo={pageInfo} />
-      </section>
+      </motion.section>
 
       {/* Education */}
-      <section id="education" className="snap-center">
+      <motion.section 
+        id="education" 
+        className="snap-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <EducationComponent education={education} />
-      </section>
+      </motion.section>
 
       {/* Experiences */}
-      <section id="experience" className="snap-center">
+      <motion.section 
+        id="experience" 
+        className="snap-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <WorkExperience experiences={experiences} />
-      </section>
+      </motion.section>
 
       {/* Skills */}
-      <section id="skills" className="snap-start">
+      <motion.section 
+        id="skills" 
+        className="snap-start"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <Skills skills={skills} />
-      </section>
+      </motion.section>
 
       {/* Projects */}
-      <section id="projects" className="snap-start">
+      <motion.section 
+        id="projects" 
+        className="snap-start"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <Projects projects={projects} />
-      </section>
+      </motion.section>
 
       {/* Contact */}
-      <section id="contact" className="snap-start">
+      <motion.section 
+        id="contact" 
+        className="snap-start"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.7 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <ContactMe />
-      </section>
+      </motion.section>
 
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
@@ -113,7 +166,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials, education }: P
           </div>
         </footer>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

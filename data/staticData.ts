@@ -341,9 +341,4 @@ export const socials = [
     title: "GitHub",
     url: "https://github.com/AmraouiKHY"
   },
-  {
-    _id: "3",
-    title: "Email",
-    url: "mailto:amraouikhireddine@gmail.com"
-  },
 ];
