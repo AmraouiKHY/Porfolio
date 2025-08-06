@@ -10,7 +10,7 @@ export default function ExperienceCard({ experience }: Props) {
   return (
     <>
       <article 
-        className="flex drop-shadow-xl flex-col rounded-3xl items-center space-y-4 flex-shrink-0 w-72 md:w-[600px] xl:w-[700px] snap-center bg-white bg-gradient-to-tr from-white to-professionalBlue/10 p-5 md:p-8 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 border border-professionalBlue/20"
+        className="flex drop-shadow-xl flex-col rounded-3xl items-center space-y-2 flex-shrink-0 w-72 md:w-[500px] xl:w-[500px] h-48 md:h-auto snap-center bg-white bg-gradient-to-tr from-white to-professionalBlue/10 p-3 md:p-8 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 border border-professionalBlue/20"
         onClick={() => setShowModal(true)}
       >
         <motion.img
@@ -18,34 +18,39 @@ export default function ExperienceCard({ experience }: Props) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2 }}
-          className="w-24 h-24 rounded-full object-contain bg-white p-2 shadow-lg border-2 border-professionalBlue/20"
+          className="w-12 h-12 md:w-24 md:h-24 rounded-full object-contain bg-white p-1 md:p-2 shadow-lg border-2 border-professionalBlue/20"
           src={experience?.companyImage || "/images/default-company-logo.png"}
           alt={experience?.company || "Company logo"}
         />
         <div className="w-full px-0 md:px-6 text-center">
-          <h4 className="text-base md:text-xl lg:text-2xl font-semibold text-professionalDark">
+          <h4 className="text-sm md:text-xl lg:text-2xl font-semibold text-professionalDark leading-tight">
             {experience?.jobTitle}
           </h4>
-          <p className="font-bold text-sm md:text-lg lg:text-xl mt-1 text-professionalBlue">
+          <p className="font-bold text-xs md:text-lg lg:text-xl mt-0.5 md:mt-1 text-professionalBlue">
             {experience?.company}
           </p>
-          <div className="flex justify-center space-x-2 my-3 flex-wrap gap-2">
-            {experience?.technologies.map((technology) => (
+          <div className="flex justify-center space-x-1 md:space-x-2 my-1 md:my-3 flex-wrap gap-1 md:gap-2">
+            {experience?.technologies.slice(0, 5).map((technology) => (
               <img
                 key={technology._id}
-                className="w-8 h-8 rounded-full object-contain bg-white p-1 border border-professionalBlue/20 shadow-sm"
+                className="w-5 h-5 md:w-8 md:h-8 rounded-full object-contain bg-white p-0.5 md:p-1 border border-professionalBlue/20 shadow-sm"
                 src={technology?.image || "/images/default-technology-icon.png"}
                 alt={technology?.title || "Technology"}
               />
             ))}
+            {experience?.technologies.length > 5 && (
+              <div className="w-5 h-5 md:w-8 md:h-8 rounded-full bg-professionalBlue/20 flex items-center justify-center border border-professionalBlue/20">
+                <span className="text-xs md:text-sm text-professionalDark font-medium">+{experience.technologies.length - 5}</span>
+              </div>
+            )}
           </div>
-          <p className="uppercase py-2 md:py-4 text-professionalBlue/70 text-xs md:text-sm font-medium">
-            {new Date(experience?.dateStarted).toDateString()} -{" "}
+          <p className="uppercase py-1 md:py-4 text-professionalBlue/70 text-xs font-medium leading-tight">
+            {new Date(experience?.dateStarted).getFullYear()} -{" "}
             {experience.isCurrentlyWorkingHere
               ? "Present"
-              : experience?.dateEnded ? new Date(experience.dateEnded).toDateString() : "Unknown"}
+              : experience?.dateEnded ? new Date(experience.dateEnded).getFullYear() : "Unknown"}
           </p>
-          <p className="text-professionalBlue/60 text-xs mt-2">Click to see details</p>
+          <p className="text-professionalBlue/60 text-xs mt-0.5 md:mt-2">Click to see details</p>
         </div>
       </article>
 
