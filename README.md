@@ -38,11 +38,6 @@ Visit [http://localhost:3000](http://localhost:3000) to explore the portfolio.
 - **SEO Optimized**: Structured for search engine visibility
 - **Modern UI/UX**: Clean, professional design aesthetic
 
-## Live Portfolio
-
-Visit my portfolio to learn more about my work and experience:
-🌐 **[View Live Portfolio](https://khireddine-amraoui.vercel.app/)**
-
 
 ## Deployment
 
