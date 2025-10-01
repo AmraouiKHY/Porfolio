@@ -41,7 +41,7 @@ Visit [http://localhost:3000](http://localhost:3000) to explore the portfolio.
 
 ## Deployment
 
-This portfolio is deployed on Vercel for optimal performance and reliability. The deployment process is automated through GitHub integration, ensuring the live site is always up-to-date with the latest changes.
+This portfolio is deployed on Netlify for optimal performance and reliability. The deployment process is automated through GitHub integration, ensuring the live site is always up-to-date with the latest changes.
 
 ---
 
