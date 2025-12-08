@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+@import "tailwindcss";
+
+@theme {
+  --color-lightGreen: #68B2A0;
+  --color-darkGreen: #2C6975;
+  --color-professionalDark: #2C3E50;
+  --color-professionalBlue: #34495E;
+  --color-lightBackground: #F8F8F8;
+  --color-darkBackground: #22262D;
+  --color-darkBlack: #000000;
+  --color-grayColor: #22262D;
+  --color-yellowColor: #FFE033;
+}
 
 @layer components {
   .heroButton {
