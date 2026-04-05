@@ -1,3 +1,6 @@
+import { i } from "framer-motion/dist/types.d-DagZKalS";
+import { title } from "process";
+
 // Data for static generation - no API calls needed during build
 export const pageInfo = {
   _id: "1",
@@ -232,6 +235,20 @@ export const skills = [
 export const projects = [
     {
     _id: "1",
+    title: "AI-Powered Research Assistant with Multi Agent Collaboration",
+    image: "/images/ai powered research assistant.png",
+    summary: "A multi-agent research assistant that conducts comprehensive literature reviews using LangGraph and Groq LLM.",
+    technologies: [
+      { _id: "tech1", title: "LangGraph", image: "/images/langgraph.png" },
+      { _id: "tech2", title: "Groq LLM", image: "/images/groq.png" },
+      { _id: "tech3", title: "Python", image: "/images/python.png" },
+      { _id: "tech4", title: "FastAPI", image: "/images/fastapi.png" }
+    ],
+    linkToBuild: "",
+    githubLink: ""
+    },
+    {
+    _id: "2",
     title: "Multi-Agent System for Data Science Automation",
     image: "/images/multi-agent.png",
     summary: "Secure, modular multi-agent system using LangGraph and FastAPI to automate end-to-end data science workflows with LLM-driven orchestration.",
@@ -245,7 +262,7 @@ export const projects = [
     githubLink: ""
   },
   {
-    _id: "2",
+    _id: "3",
     title: "Reinforcement Learning for Ramp Metering",
     image: "/images/rl-traffic.png",
     summary: "Training Q-learning and Deep Q-learning on a SUMO network to optimize traffic flow on highways and ramps with and without traffic lights.",
@@ -259,7 +276,7 @@ export const projects = [
     githubLink: ""
   },
   {
-    _id: "3",
+    _id: "4",
     title: "Arabic and English Sign Languages Recognition",
     image: "/images/sign-language.png",
     summary: "Built a deep learning-based image classification model to recognize hand signs in both Arabic and English using convolutional neural networks (CNNs).",
@@ -273,7 +290,7 @@ export const projects = [
     githubLink: ""
   },
   {
-    _id: "4",
+    _id: "5",
     title: "Forest Fire Detection Platform",
     image: "/images/forest-fire.png",
     summary: "Multi-platform content scraper and Transformer-based image classification system for real-time forest fire detection and monitoring across Algeria.",
@@ -287,7 +304,7 @@ export const projects = [
     githubLink: ""
   },
   {
-    _id: "5",
+    _id: "6",
     title: "Money Lions Fraud Detection",
     image: "/images/fraud-detection.png",
     summary: "Machine learning model to detect fraudulent transactions using advanced classification algorithms and oversampling techniques to handle class imbalances.",
@@ -301,7 +318,7 @@ export const projects = [
     githubLink: ""
   },
   {
-    _id:"6",
+    _id:"7",
     title: "Guaspiless",
     image: "/images/guaspiless.png",
     summary: "university project ,A website that fights against food waste.a user can order shopping carts according to their needs and location.",
@@ -315,7 +332,7 @@ export const projects = [
     githubLink: ""
   },
   {
-    _id: "7",
+    _id: "8",
     title: "J'reside - University Residence Management",
     image: "/images/jreside.png",
     summary: "Mobile application developed with Flutter for university residence management, facilitating communication between administrators and residents.",
